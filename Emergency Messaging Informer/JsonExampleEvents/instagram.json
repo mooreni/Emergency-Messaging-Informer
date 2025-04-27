@@ -1,0 +1,45 @@
+{
+    "channel_name": "instagram",
+    "events": [
+        {
+            "event_name": "Trending Post",
+            "city": "Global",
+            "date_time": 1734972000,
+            "description": "Celebrity post by @StarFanatic reaches 2M likes in under an hour.",
+            "general_information": {
+                "active": true,
+                "forces_arrival_at_scene": false
+            }
+        },
+        {
+            "event_name": "Influencer Event",
+            "city": "New York",
+            "date_time": 1735065600,
+            "description": "Top influencers gathered for the annual Creators Summit. Featured panel on AI in social media.",
+            "general_information": {
+                "active": false,
+                "forces_arrival_at_scene": false
+            }
+        },
+        {
+            "event_name": "Photo Challenge",
+            "city": "Paris",
+            "date_time": 1735111200,
+            "description": "Hashtag #CaptureParisChallenge trends globally with over 1M user submissions.",
+            "general_information": {
+                "active": true,
+                "forces_arrival_at_scene": false
+            }
+        },
+        {
+            "event_name": "Live Stream",
+            "city": "Los Angeles",
+            "date_time": 1735156800,
+            "description": "Live Q&A session with actor @SuperStarX attracts over 500k viewers.",
+            "general_information": {
+                "active": true,
+                "forces_arrival_at_scene": false
+            }
+        }
+    ]
+}

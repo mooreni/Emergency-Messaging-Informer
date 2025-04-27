@@ -1,0 +1,45 @@
+{
+    "channel_name": "news",
+    "events": [
+        {
+            "event_name": "Election Results",
+            "city": "Capital City",
+            "date_time": 1734986400,
+            "description": "Mayor's election results announced. Candidate John Smith wins by 52% majority.",
+            "general_information": {
+                "active": false,
+                "forces_arrival_at_scene": false
+            }
+        },
+        {
+            "event_name": "Severe Weather Alert",
+            "city": "Stormville",
+            "date_time": 1735044000,
+            "description": "Tornado watch issued for the eastern region. Residents advised to seek shelter.",
+            "general_information": {
+                "active": true,
+                "forces_arrival_at_scene": false
+            }
+        },
+        {
+            "event_name": "Tech Conference",
+            "city": "Silicon Valley",
+            "date_time": 1735092000,
+            "description": "Annual Tech Innovators Conference begins at the Tech Center. Keynote by AI pioneer Sarah Lee.",
+            "general_information": {
+                "active": false,
+                "forces_arrival_at_scene": false
+            }
+        },
+        {
+            "event_name": "Sports Final",
+            "city": "Victory City",
+            "date_time": 1735137600,
+            "description": "Local team 'Thunderhawks' wins the regional basketball championship in a thrilling overtime match.",
+            "general_information": {
+                "active": false,
+                "forces_arrival_at_scene": false
+            }
+        }
+    ]
+}

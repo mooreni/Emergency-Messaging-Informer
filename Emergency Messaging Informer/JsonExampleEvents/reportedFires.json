@@ -1,0 +1,31 @@
+Channel 
+Stats :
+Total : 4
+active : 3
+forces arrival at scene : 3
+
+Event Reports :
+
+Report_1 :
+city : Flame City
+date time : 23/12/24 11:20
+event name : Building Fire
+summary : Fire broke out in a 12-stor...
+
+Report_2 :
+city : Greenwood
+date time : 24/12/24 07:20
+event name : Forest Fire
+summary : Large wildfire spreading ra...
+
+Report_3 :
+city : Mechanic Town
+date time : 25/12/24 04:20
+event name : Vehicle Fire
+summary : A truck caught fire on the ...
+
+Report_4 :
+city : Lab City
+date time : 25/12/24 09:20
+event name : Chemical Spill
+summary : Small chemical spill report...

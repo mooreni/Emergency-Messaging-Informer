@@ -1,0 +1,45 @@
+{
+    "channel_name": "fire_dept",
+    "events": [
+        {
+            "event_name": "Building Fire",
+            "city": "Flame City",
+            "date_time": 1734952800,
+            "description": "Fire broke out in a 12-story residential building on Main Avenue. Evacuation in progress.",
+            "general_information": {
+                "active": true,
+                "forces_arrival_at_scene": true
+            }
+        },
+        {
+            "event_name": "Forest Fire",
+            "city": "Greenwood",
+            "date_time": 1735024800,
+            "description": "Large wildfire spreading rapidly in Green Valley Park. Multiple units deployed.",
+            "general_information": {
+                "active": true,
+                "forces_arrival_at_scene": true
+            }
+        },
+        {
+            "event_name": "Vehicle Fire",
+            "city": "Mechanic Town",
+            "date_time": 1735100400,
+            "description": "A truck caught fire on the highway near Exit 23. No injuries reported.",
+            "general_information": {
+                "active": true,
+                "forces_arrival_at_scene": true
+            }
+        },
+        {
+            "event_name": "Chemical Spill",
+            "city": "Lab City",
+            "date_time": 1735118400,
+            "description": "Small chemical spill reported at an industrial plant on Factory Road. Hazmat team dispatched.",
+            "general_information": {
+                "active": false,
+                "forces_arrival_at_scene": false
+            }
+        }
+    ]
+}

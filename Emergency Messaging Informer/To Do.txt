@@ -1,0 +1,94 @@
+------SERVER:------
+============================================
+Important changes:
+
+
+============================================
+To Do:
+1. Test that everything works:
+   Running two clients at the same time
+
+===========================================
+Open Questions:
+
+
+============================================
+Notes, stuff we understood:
+
+BaseServer: waits till a client tries initiating connection,
+            then creates a connectionHandler for it and starts its running.
+
+ConnectionHandler: will hold a protocol and encoderDecoder. 
+
+Connections: manages all the connecntionHandlers, usernames and password, and subscriptions
+            connections should STAY for a type T as its supposed to fit any type!
+            all actions on handlers should pass through connections
+
+Login: need to deal with socket connection error in the client side
+
+============================================
+conncetions logic:
+1. when a client connects to the serverSocket, a handler is created with the 'connected' flag true -
+   representing that the client succesfully connected to the server.
+2. when a user is succesfully connected using the 'login' command, the client is added with its
+   connectionId to the 'connectedClients' - representing clients who succesfully signed in using valid
+   username and passcode.
+3. when a client disconnects, there are 2 major steps:
+   a. logging out, including removal of every subscription and removal from the connectedClients list.
+      the end of this step is indicated by the 'shouldTerminate' flag in the protocol turning to 'false'.
+   b. closing the clientSocket and end the connection with the server.
+
+
+------CLIENT:------
+============================================
+Important changes:
+1. Added receipts map - from receiptId to the command it was sent with
+2. Updated the way we send frames to server - using the "framesToSend"
+3. Finished logout, summary need to be checked, login needs to be refined
+
+============================================
+To Do:
+
+1.Start Client
+Guy: Login, logout, summary
+Nitzan: report, Exit, Join
+
+2. Split "host" in main - its made of "127.0.0.1:7777", host should only be "127.0.0.1"
+3. Find better way to handle login without the "attempted username", handle more cases, figure out logging in and out
+4. In the server side, the host and port will be recieved in the args
+
+
+
+===========================================
+Open Questions:
+1. in the thread runs, when do we want to stop them? and what do we do when there is an error while running?
+   maybe we need some kind of isInterrupted and interrupt
+
+2. What happens on logout? page 18 says close socket - do 
+
+3. We print from both threads into the terminal, and one also reads from the terminal - how does that work?
+
+============================================
+Notes, stuff we understood:
+
+1. There are two threads:
+   one reads from the terminal and creates relevent frame and sends it
+   and one that reads, and handles the messages
+
+2. i think we'll need to save some information in the protocol so it could create and handle frames, 
+   regarding things such as subscriptionIDs
+   we'll need to see how it will affect syncronization
+
+
+============================================
+A bit of order regarding the methods of the handler:
+connect - connects to the socket using the host and port that the handler receives in the constructor.
+
+All the getters:
+getLine - calls getFrameAscii.
+getFrameAscii - calls getBytes to receive the bytes from the server, and then getFrameAscii continues
+reading using getBytes until it reaches the delimiter (currently defined as /n, but I believe we’ll need
+to change it to match what we did on the server).
+
+The same chaining happens in the senders:
+It starts with sendLine, which calls sendFrameAscii, and through that, sendBytes sends the message with the delimiter.

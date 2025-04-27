@@ -1,0 +1,45 @@
+{
+    "channel_name": "ambulance",
+    "events": [
+        {
+            "event_name": "Cardiac Arrest",
+            "city": "Health City",
+            "date_time": 1734975600,
+            "description": "Elderly male experiencing cardiac arrest at the Sunrise Retirement Home. CPR in progress.",
+            "general_information": {
+                "active": true,
+                "forces_arrival_at_scene": true
+            }
+        },
+        {
+            "event_name": "Car Accident",
+            "city": "Speedway",
+            "date_time": 1735058400,
+            "description": "Two-vehicle collision on Highway 12. Multiple injuries reported.",
+            "general_information": {
+                "active": true,
+                "forces_arrival_at_scene": true
+            }
+        },
+        {
+            "event_name": "Drowning Incident",
+            "city": "Blue Bay",
+            "date_time": 1735080000,
+            "description": "A swimmer pulled from the water unconscious at Shoreline Beach. CPR performed on site.",
+            "general_information": {
+                "active": true,
+                "forces_arrival_at_scene": true
+            }
+        },
+        {
+            "event_name": "Pedestrian Injury",
+            "city": "Walkertown",
+            "date_time": 1735130400,
+            "description": "Pedestrian slipped on ice outside City Hall. Minor injuries reported.",
+            "general_information": {
+                "active": false,
+                "forces_arrival_at_scene": false
+            }
+        }
+    ]
+}
